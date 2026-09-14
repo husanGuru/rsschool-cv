@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Абдигафуров Хусанжон — CV</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <img
+          class="avatar"
+          src="assets/avatar.jpg"
+          alt="Фото Абдигафурова Хусанжона"
+          width="160"
+          height="160"
+        >
+        <div class="header-intro">
+          <h1>Абдигафуров Хусанжон</h1>
+          <p class="tagline">Fullstack-разработчик · React / Node.js / TypeScript</p>
+        </div>
+
+        <nav class="nav">
+          <ul>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#skills">Навыки</a></li>
+            <li><a href="#code">Пример кода</a></li>
+            <li><a href="#experience">Опыт работы</a></li>
+            <li><a href="#education">Образование</a></li>
+            <li><a href="#english">Английский</a></li>
+          </ul>
+        </nav>
+
+        <ul class="contacts">
+          <li>📧 <a href="mailto:abdigafurovhusan@gmail.com">abdigafurovhusan@gmail.com</a></li>
+          <li>📍 Ташкент, Узбекистан</li>
+          <li>🔗 <a href="https://www.linkedin.com/in/husan-abdigafurov-a45389220/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li>💻 <a href="https://github.com/husanGuru" target="_blank" rel="noopener">GitHub</a></li>
+          <li>💬 <a href="https://t.me/husan_devs" target="_blank" rel="noopener">Telegram</a></li>
+        </ul>
+      </header>
+
+      <main>
+        <section id="about">
+          <h2>Обо мне</h2>
+          <p>
+            Fullstack-разработчик с многолетним опытом в продуктовых компаниях и агентствах.
+            Занимаюсь полным циклом разработки — от архитектуры до деплоя и поддержки, работал
+            как в команде, так и руководя ей. Реализовывал проекты разного масштаба: от
+            коммерческих сайтов до продуктов с большой пользовательской аудиторией, в том числе
+            с внедрением AI-функций в production.
+          </p>
+          <p>Мои сильные стороны:</p>
+          <ul>
+            <li>🚀 Полный цикл разработки: от архитектуры до деплоя</li>
+            <li>🤖 Опыт интеграции AI-функций в production (OpenAI, LangChain)</li>
+            <li>👥 Опыт руководства и масштабирования команды</li>
+            <li>🏗️ TypeScript по всему стеку: React/Next.js, NestJS/Express, MySQL/PostgreSQL, Redis</li>
+            <li>🔄 Реализовал 20+ коммерческих проектов разного масштаба</li>
+          </ul>
+        </section>
+
+        <section id="skills">
+          <h2>Навыки</h2>
+          <div class="skills-grid">
+            <div class="skills-group">
+              <h3>Frontend</h3>
+              <ul>
+                <li>React</li>
+                <li>Next.js</li>
+                <li>TypeScript</li>
+                <li>Tailwind CSS</li>
+                <li>Material UI</li>
+                <li>Redux</li>
+                <li>Zustand</li>
+                <li>Vite</li>
+              </ul>
+            </div>
+            <div class="skills-group">
+              <h3>Backend</h3>
+              <ul>
+                <li>Node.js</li>
+                <li>NestJS</li>
+                <li>Express</li>
+                <li>MySQL</li>
+                <li>PostgreSQL</li>
+                <li>MongoDB</li>
+                <li>Redis</li>
+                <li>ClickHouse</li>
+                <li>Prisma</li>
+                <li>TypeORM</li>
+                <li>Sequelize</li>
+              </ul>
+            </div>
+            <div class="skills-group">
+              <h3>Тестирование</h3>
+              <ul>
+                <li>Jest</li>
+                <li>React Testing Library</li>
+                <li>Playwright</li>
+                <li>Vitest</li>
+              </ul>
+            </div>
+            <div class="skills-group">
+              <h3>AI</h3>
+              <ul>
+                <li>OpenAI API</li>
+                <li>LangChain</li>
+                <li>Claude Code</li>
+                <li>Cursor</li>
+                <li>GitHub Copilot</li>
+              </ul>
+            </div>
+            <div class="skills-group">
+              <h3>DevOps &amp; Tools</h3>
+              <ul>
+                <li>Docker</li>
+                <li>Git</li>
+                <li>CI/CD</li>
+                <li>REST API</li>
+                <li>GraphQL</li>
+                <li>Figma</li>
+                <li>Strapi</li>
+                <li>Linux</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="code">
+          <h2>Пример кода</h2>
+          <h3>Решение с Codewars: Grid Partition</h3>
+          <p>Задача: проверить, можно ли разделить сетку на две части с равной суммой элементов</p>
+          <pre><code>function canPartitionGrid(grid: number[][]): boolean {
+  const n = grid.length;
+
+  // Вычисляем общую сумму
+  const total = grid.reduce(
+    (acc, row) =&gt; row.reduce((sum, val) =&gt; sum + val, 0) + acc,
+    0,
+  );
+
+  // Проверяем горизонтальные разделения
+  let tempSum = 0;
+  for (let i = 0; i &lt; n - 1; i++) {
+    tempSum += grid[i].reduce((sum, val) =&gt; sum + val);
+    if (tempSum === total - tempSum) {
+      return true;
+    }
+  }
+
+  // Проверяем вертикальные разделения
+  tempSum = 0;
+  const m = grid[0].length;
+  for (let i = 1; i &lt;= m - 1; i++) {
+    tempSum += grid
+      .map((row) =&gt; row.slice(i - 1, i))
+      .reduce((acc, col) =&gt; col.reduce((sum, val) =&gt; sum + val, 0) + acc, 0);
+    if (tempSum === total - tempSum) {
+      return true;
+    }
+  }
+
+  return false;
+}</code></pre>
+          <p><strong>Ключевые навыки:</strong> TypeScript, алгоритмы, оптимизация</p>
+        </section>
+
+        <section id="experience">
+          <h2>Опыт работы</h2>
+
+          <article>
+            <h3>Twistly.ai — Fullstack-разработчик</h3>
+            <p class="dates">Сентябрь 2023 – Июнь 2024</p>
+            <ul>
+              <li>Разрабатывал надстройки Microsoft Office (React, TypeScript) для 3+ млн пользователей</li>
+              <li>PowerPoint-надстройка с AI-генерацией презентаций заняла №1 место на Microsoft Marketplace (⭐ 4.7, 440+ отзывов)</li>
+              <li>Внедрял AI-функции используя OpenAI API и LangChain</li>
+              <li>Разрабатывал backend-сервисы на NestJS, MySQL, Redis, ClickHouse</li>
+              <li>Проектировал UI на React, Material UI, Zustand с покрытием тестами (Jest, Playwright)</li>
+              <li>Участвовал в архитектурных решениях и technical planning</li>
+            </ul>
+            <p><strong>Технологический стек:</strong> React, TypeScript, NestJS, MySQL, Redis, ClickHouse, OpenAI, LangChain</p>
+          </article>
+
+          <article>
+            <h3>amoCRM / Kommo — Frontend-разработчик</h3>
+            <p class="dates">Апрель 2023 – Август 2023</p>
+            <ul>
+              <li>Модернизировал legacy-фронтенд CRM: миграция с Backbone.js/jQuery на React + TypeScript</li>
+              <li>Повысил производительность и улучшил поддерживаемость кода</li>
+              <li>Мигрировал часть кодовой базы с JavaScript на TypeScript</li>
+              <li>Разрабатывал интерфейсы для ключевых бизнес-процессов с интеграцией backend API</li>
+            </ul>
+            <p><strong>Технологический стек:</strong> React, TypeScript, Redux, REST API</p>
+          </article>
+
+          <article>
+            <h3>Фриланс — Fullstack-разработчик</h3>
+            <p class="dates">Август 2022 – Апрель 2023</p>
+            <ul>
+              <li>Реализовал под ключ business и e-commerce сайты для локальных клиентов</li>
+              <li>Вёл полный цикл: требования → архитектура → разработка → деплой → поддержка</li>
+              <li>Работал с Next.js, Material UI, Express/Strapi, MySQL</li>
+            </ul>
+            <p>
+              Примеры проектов: e-commerce платформа на Next.js + Express (MySQL, Stripe интеграция),
+              corporate website на Next.js с CMS функциональностью.
+            </p>
+          </article>
+
+          <article>
+            <h3>The Agency (маркетинговое агентство) — Fullstack-разработчик → Тимлид</h3>
+            <p class="dates">Декабрь 2020 – Август 2022</p>
+            <ul>
+              <li>Пришёл первым разработчиком и вырастил команду с 1 до 6 инженеров</li>
+              <li>Внедрил код-ревью, CI/CD и единые стандарты разработки</li>
+              <li>
+                Реализовал 20+ коммерческих проектов: интернет-магазины и e-commerce решения,
+                корпоративные сайты, Telegram-боты (Telegraf.js), интеграции со сторонними сервисами.
+                Примеры: <a href="https://parfumgallery.uz" target="_blank" rel="noopener">parfumgallery.uz</a>,
+                <a href="https://yapondokon.uz" target="_blank" rel="noopener">yapondokon.uz</a>,
+                <a href="https://iqwatt.uz" target="_blank" rel="noopener">iqwatt.uz</a>
+              </li>
+              <li>Отвечал за оценку трудозатрат и приоритизацию задач</li>
+              <li>Управлял пайплайнами деплоя и серверной инфраструктурой</li>
+              <li>Обеспечивал качество релизов и поддержку production</li>
+            </ul>
+            <p><strong>Технологический стек:</strong> React, Next.js, Node.js, Express, NestJS, MySQL, PostgreSQL, Docker, CI/CD</p>
+          </article>
+        </section>
+
+        <section id="education">
+          <h2>Образование</h2>
+
+          <article>
+            <h3>Ташкентский университет информационных технологий (TUIT)</h3>
+            <p class="dates">2019 – 2023</p>
+            <p>Бакалавр — Программная инженерия</p>
+          </article>
+
+          <article>
+            <h3>RS School</h3>
+            <p class="dates">2025</p>
+            <ul>
+              <li>
+                <a href="https://app.rs.school/certificate/njph6vik" target="_blank" rel="noopener">Курс React</a>
+                — Advanced React patterns, hooks, performance optimization
+              </li>
+              <li>
+                <a href="https://app.rs.school/certificate/riu0l7ga" target="_blank" rel="noopener">Курс Node.js</a>
+                — Backend development, REST APIs, database design
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section id="english">
+          <h2>Английский язык</h2>
+          <p>🌐 <strong>Уровень:</strong> C1 (Advanced)</p>
+          <p>📜 <strong>Сертификат:</strong> IELTS 7.5 (2018)</p>
+          <p>💬 <strong>Практика:</strong> Daily communication, GitHub, documentation, international projects</p>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <a href="https://github.com/husanGuru" target="_blank" rel="noopener">GitHub автора</a>
+        <span>© 2026</span>
+        <a href="https://rs.school/" target="_blank" rel="noopener" class="rss-link">
+          <img src="assets/rss-logo.svg" alt="RS School" width="28" height="28">
+          RS School
+        </a>
+      </footer>
+    </div>
+  </body>
+</html>

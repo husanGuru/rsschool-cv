@@ -7,7 +7,7 @@
 ## Контактная информация
 
 📧 **Email:** [abdigafurovhusan@gmail.com](mailto:abdigafurovhusan@gmail.com)  
-🇺🇿 **Локация:** Ташкент, Узбекистан  
+📍 **Локация:** Ташкент, Узбекистан  
 🔗 **LinkedIn:** [LinkedIn профиль](https://www.linkedin.com/in/husan-abdigafurov-a45389220/)  
 💻 **GitHub:** [github.com/abdigafurov](https://github.com/husanGuru)  
 💬 **Telegram:** [@husanGuru](https://t.me/husan_devs)
